@@ -2,17 +2,20 @@
 
 ---
 
-Repo ini berguna untuk membantu `praktikan` dan `aslab` dalam mengarjakan IoT.\
+Repo ini berguna untuk membantu `praktikan` dan `aslab` dalam praktikum IoT khsusnya di materi Web Service. \
+Dengan tantangan dari Dosen yaitu memanfaatkan API untuk store data + menggerakan aktuator by API. \
+Intinya sih gitu ya guys. Kalo yang ku ulik + tanya ke AI, katanya udah bener.\
+Koreksi jika salah di Fitur Issu Github yak ^-^
 
-### Langkah Praktikum Via Tulisan
+### Langkah Praktikum via Tulisan / Tutorial
 
-Link Notion : [Klik Disini](https://www.notion.so/Modul-Prak-IoT-Web-Service-by-API-29750fec77e880a1bb22eb5f43fe7fcc?source=copy_link)
+Link Penjelasn Notion : [Klik Disini - Menuju Notion](https://www.notion.so/Modul-Prak-IoT-Web-Service-by-API-29750fec77e880a1bb22eb5f43fe7fcc?source=copy_link)
 
-### Technology Stack
+### Stack Technology Yang Digunakan
 
-- PHP Vanila
-- MySQL
-- Arduino Uno
+- PHP Vanila - (Code Base Tampilan dan API)
+- MySQL - (Nyimpen Data)
+- Arduino Uno - (Untuk Code ESP32)
 
 ### Cara Pake
 
@@ -24,39 +27,4 @@ Link Notion : [Klik Disini](https://www.notion.so/Modul-Prak-IoT-Web-Service-by-
 6. Buka `localhost/iot_app` di browser untuk akses webnya
 7. Edit file Arduino Uno nya, mengikuti Hostpot masing masing
 8. Lebih lengkap baca Link Notion
-
----
-# IOT APP - Sederhana
-
-IoT APP - Sederhana is a simple web-based IoT platform that allows users to control and monitor their IoT devices remotely. The platform is built using PHP, MySQL, and Arduino Uno.
-
-### Features
-
-* Remote control of IoT devices
-* Real-time monitoring of IoT devices
-* Secure authentication and authorization
-
-### Technology Stack
-
-* PHP Vanila
-* MySQL
-* Arduino Uno
-
-### How to Use
-
-1. Clone this repository to your local machine.
-2. Create a new database in MySQL and import the `iot_app.sql` file.
-3. Configure your Arduino Uno by copying the `arduino/esp32.ino` file and modifying it to suit your needs.
-4. Open `localhost/iot_app` in your web browser to access the web platform.
-5. Edit the Arduino Uno code to use the correct hostpot for your device.
-
-### Tutorials
-
-* [Praktikum IoT dengan PHP dan Arduino Uno](https://www.notion.so/Modul-Prak-IoT-Web-Service-by-API-29750fec77e880a1bb22eb5f43fe7fcc?source=copy_link)
-* [Membuat IoT dengan PHP, MySQL, dan Arduino Uno](https://www.notion.so/Modul-Prak-IoT-Web-Service-by-API-29750fec77e880a1bb22eb5f43fe7fcc?source=copy_link)
-
-### License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
-
 

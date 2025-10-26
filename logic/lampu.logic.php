@@ -32,6 +32,7 @@ if (isset($_GET['lampu_on']) || isset($_GET['lampu_off'])) {
     exit;
   }
 
+  // Balikin ke halaman awal
   header('Location: ../index.php');
   exit;
 }

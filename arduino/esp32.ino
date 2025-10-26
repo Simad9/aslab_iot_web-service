@@ -12,7 +12,7 @@ DHT dht(DHTPIN, DHTTYPE);
 // konfigurasi WiFi dan server
 const char* ssid = "YOUR_SSID";                       // Nama WiFi Kamu
 const char* password = "YOUR_WIFI_PASS";              // Password WiFI Kamu
-const char* server = "http://your-domain.or.ip/api";  // IP PC kamu
+const char* server = "http://your-domain.or.ip/iot_app/api";  // IP PC kamu
 // const char* API_KEY = "S3cretAPIKeyReplaceThis";   // (opsional) untuk keamanan aja
 const char* DEVICE_ID = "esp32-unit-001";             // (opsional) untuk ngasih tau Device aja
 
@@ -191,7 +191,7 @@ void executeCommand(long id, String cmd, String payload){
 
 		// Buat data JSON untuk dikirim
     StaticJsonDocument<256> doc;
-    doc["api_key"] = API_KEY;
+    // doc["api_key"] = API_KEY;
     doc["command_id"] = id;
     doc["result"] = result;
 
