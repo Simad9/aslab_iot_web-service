@@ -13,14 +13,16 @@ DHT dht(DHTPIN, DHTTYPE);
 const char* ssid = "YOUR_SSID";                       // Nama WiFi Kamu
 const char* password = "YOUR_WIFI_PASS";              // Password WiFI Kamu
 const char* server = "http://your-domain.or.ip/api";  // IP PC kamu
-// const char* API_KEY = "S3cretAPIKeyReplaceThis";      // (opsional) untuk keamanan aja
+// const char* API_KEY = "S3cretAPIKeyReplaceThis";   // (opsional) untuk keamanan aja
 const char* DEVICE_ID = "esp32-unit-001";             // (opsional) untuk ngasih tau Device aja
 
 // Untuk ngatur waktu
 unsigned long lastSend = 0;
 const unsigned long sendInterval = 60 * 1000UL; // kirim tiap 60 detik
+// const unsigned long sendInterval = 5 * 1000UL; // kirim tiap 5 detik
 unsigned long lastPoll = 0;
 const unsigned long pollInterval = 10 * 1000UL; // cek perintah tiap 10 detik
+// const unsigned long sendInterval = 5 * 1000UL; // cek perintah tiap 5 detik
 
 void setup(){
   // Setup Basic

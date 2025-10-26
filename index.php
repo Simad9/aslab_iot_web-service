@@ -1,12 +1,3 @@
-<?php
-// Untuk Lampu Nyala dan Mati
-if (isset($_GET['lampu_on'])) {
-  // CODE KIRIM LAMPU NYALA
-} else if (isset($_GET['lampu_off'])) {
-  // KIRIM LAMPU MATI
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +17,7 @@ if (isset($_GET['lampu_on'])) {
     <section class="mb-3">
       <h2>Remote Control (misalnya)</h2>
       <div class="d-flex gap-3">
-        <form action="">
+        <form action="logic/lampu.logic.php">
           <button type="submit" class="btn btn-primary" name="lampu_on" value="true">Lampu ON</button>
           <button type="submit" class="btn btn-outline-primary" name="lampu_off" value="true">lampu OFF</button>
         </form>
@@ -41,7 +32,8 @@ if (isset($_GET['lampu_on'])) {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Data</th>
+            <th scope="col">Data Suhu</th>
+            <th scope="col">Data kelembapan</th>
             <th scope="col">Tanggal & Waktu</th>
           </tr>
         </thead>
@@ -57,6 +49,7 @@ if (isset($_GET['lampu_on'])) {
             <tr>
               <th scope="row"><?= $key + 1 ?></th>
               <td><?= $data['value'] ?></td>
+              <td><?= $data['raw_value'] ?></td>
               <td><?= $data['recorded_at'] ?></td>
             </tr>
           <?php endforeach; ?>
