@@ -25,7 +25,7 @@ if (!$device_id || $value === null) {
 }
 
 // Simpan / update device
-$sql = "INSERT INTO devices (device_id, last_seen) VALUES ($device_id, NOW()) ON DUPLICATE KEY UPDATE last_seen = NOW()";
+$sql = "INSERT INTO devices (device_id, last_seen) VALUES ('$device_id', NOW()) ON DUPLICATE KEY UPDATE last_seen = NOW()";
 $result = mysqli_query($koneksi, $sql);
 
 // Error Handling
@@ -36,7 +36,7 @@ if (!$result) {
 }
 
 // Simpan data sensor
-$sql = "INSERT INTO sensor_data (device_id, sensor_type, value, raw_value) VALUES ($device_id, '$sensor_type', $value, '$raw')";
+$sql = "INSERT INTO sensor_data (device_id, sensor_type, value, raw_value) VALUES ('$device_id', '$sensor_type', $value, '$raw')";
 mysqli_query($koneksi, $sql);
 
 // Error Handling

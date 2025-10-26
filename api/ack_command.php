@@ -22,15 +22,19 @@ if (!$command_id) {
     exit;
 }
 
+// Keamanan pengiriman data aja
+$command_id = mysqli_real_escape_string($koneksi, $command_id);
+$result = mysqli_real_escape_string($koneksi, $result);
+
 // Update status command
-$sql = "UPDATE commands SET status = 'executed', executed_at = NOW(), payload = $result WHERE id = $command_id";
+$sql = "UPDATE commands SET status = 'executed', executed_at = NOW(), payload = '$result' WHERE id = '$command_id'";
 $result = mysqli_query($koneksi, $sql);
 
 // Cek apakah update berhasil
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_affected_rows($koneksi) > 0) {
     http_response_code(200);
     echo json_encode(['status' => 'ok']);
 } else {
     http_response_code(500);
-    echo json_encode(['status' => 'error']);
+    echo json_encode(['status' => 'error', 'details' => mysqli_error($koneksi)]);
 }
